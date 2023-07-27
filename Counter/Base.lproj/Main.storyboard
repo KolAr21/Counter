@@ -17,47 +17,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqh-uQ-sdZ">
-                                <rect key="frame" x="163.66666666666666" y="366" width="66" height="120"/>
+                                <rect key="frame" x="163.66666666666666" y="366.33333333333331" width="65.666666666666657" height="119.66666666666669"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esm-C5-mT7">
-                                <rect key="frame" x="50" y="230" width="293" height="36"/>
+                                <rect key="frame" x="50.333333333333343" y="230.33333333333334" width="292.33333333333326" height="36.000000000000028"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guL-kZ-H6f">
-                                <rect key="frame" x="137" y="586" width="119" height="62"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="119" id="XFk-NK-Ww0"/>
-                                    <constraint firstAttribute="height" constant="62" id="vOL-Lk-t5r"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="tintColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Click" cornerStyle="large">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="buttonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="0fF-Ea-V3s"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="0dF-Ol-VEP">
+                                <rect key="frame" x="92" y="586" width="209" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guL-kZ-H6f">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="7LB-Cd-cV9"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="minus" catalog="system" cornerStyle="large"/>
+                                        <connections>
+                                            <action selector="countDel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0X-lc-hXT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKd-5P-lfB">
+                                        <rect key="frame" x="145" y="0.0" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="6Es-CN-z37"/>
+                                            <constraint firstAttribute="height" constant="64" id="R3J-cJ-7jZ"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" cornerStyle="large"/>
+                                        <connections>
+                                            <action selector="countAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMZ-vi-qGU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.39490914869999999" green="0.35859294000000003" blue="0.4423828125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="esm-C5-mT7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ck-bm-cpk"/>
-                            <constraint firstItem="Cqh-uQ-sdZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BBW-uL-Cs4"/>
-                            <constraint firstItem="Cqh-uQ-sdZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QFA-rt-YQ0"/>
-                            <constraint firstItem="Cqh-uQ-sdZ" firstAttribute="top" secondItem="esm-C5-mT7" secondAttribute="bottom" constant="100" id="Veg-kd-lAZ"/>
-                            <constraint firstItem="guL-kZ-H6f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jgC-EV-bme"/>
-                            <constraint firstItem="guL-kZ-H6f" firstAttribute="top" secondItem="Cqh-uQ-sdZ" secondAttribute="bottom" constant="100" id="vy7-Jk-e9h"/>
+                            <constraint firstItem="Cqh-uQ-sdZ" firstAttribute="top" secondItem="esm-C5-mT7" secondAttribute="bottom" constant="100" id="20l-Jp-PBa"/>
+                            <constraint firstItem="esm-C5-mT7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8o5-CH-RVo"/>
+                            <constraint firstItem="Cqh-uQ-sdZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="M52-8j-qc5"/>
+                            <constraint firstItem="Cqh-uQ-sdZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OKW-02-SH3"/>
+                            <constraint firstItem="0dF-Ol-VEP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SWe-Re-xDe"/>
+                            <constraint firstItem="0dF-Ol-VEP" firstAttribute="top" secondItem="Cqh-uQ-sdZ" secondAttribute="bottom" constant="100" id="T2y-dT-6Y3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="clickButton" destination="guL-kZ-H6f" id="ENw-n6-iUK"/>
                         <outlet property="countLabel" destination="Cqh-uQ-sdZ" id="wLC-ZA-cBU"/>
+                        <outlet property="plusButton" destination="aKd-5P-lfB" id="dJ0-3g-sBE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -66,6 +81,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
