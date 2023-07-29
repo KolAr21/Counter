@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,29 +13,29 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqh-uQ-sdZ">
-                                <rect key="frame" x="163.66666666666666" y="224.33333333333334" width="65.666666666666657" height="119.66666666666666"/>
+                                <rect key="frame" x="182.33333333333334" y="264.33333333333331" width="65.666666666666657" height="119.66666666666669"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esm-C5-mT7">
-                                <rect key="frame" x="50.333333333333343" y="138.33333333333334" width="292.33333333333326" height="36"/>
+                                <rect key="frame" x="69" y="178.33333333333334" width="292.33333333333331" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="История изменения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCp-jO-AoP">
-                                <rect key="frame" x="108.66666666666669" y="478" width="176" height="20.333333333333314"/>
+                                <rect key="frame" x="127" y="518" width="176" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="0dF-Ol-VEP">
-                                <rect key="frame" x="40.666666666666657" y="394" width="312" height="64"/>
+                                <rect key="frame" x="59" y="434" width="312" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guL-kZ-H6f">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
@@ -46,7 +46,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="minus" catalog="system" cornerStyle="large"/>
                                         <connections>
-                                            <action selector="countDel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0X-lc-hXT"/>
+                                            <action selector="minusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7wj-ba-DXF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezu-ct-dFI">
@@ -58,26 +58,28 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="arrow.clockwise" catalog="system" cornerStyle="large"/>
                                         <connections>
-                                            <action selector="countNull:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5CG-E9-YBh"/>
+                                            <action selector="refreshButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5CG-E9-YBh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKd-5P-lfB">
                                         <rect key="frame" x="248" y="0.0" width="64" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="6Es-CN-z37"/>
-                                            <constraint firstAttribute="height" constant="64" id="R3J-cJ-7jZ"/>
                                         </constraints>
                                         <color key="tintColor" systemColor="tintColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" cornerStyle="large"/>
                                         <connections>
-                                            <action selector="countAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMZ-vi-qGU"/>
+                                            <action selector="plusButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMZ-vi-qGU"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="jvb-aI-KZp"/>
+                                </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FtV-yh-fQs">
-                                <rect key="frame" x="40.666666666666657" y="518.33333333333337" width="312" height="249.66666666666663"/>
+                                <rect key="frame" x="59" y="558.33333333333337" width="312" height="289.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="312" id="8QC-sG-mXv"/>
@@ -98,8 +100,6 @@
                             <constraint firstItem="Cqh-uQ-sdZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OKW-02-SH3"/>
                             <constraint firstItem="0dF-Ol-VEP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SWe-Re-xDe"/>
                             <constraint firstItem="0dF-Ol-VEP" firstAttribute="top" secondItem="Cqh-uQ-sdZ" secondAttribute="bottom" constant="50" id="T2y-dT-6Y3"/>
-                            <constraint firstItem="esm-C5-mT7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50.333333333333343" id="WuA-pz-wh6"/>
-                            <constraint firstItem="0dF-Ol-VEP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40.666666666666657" id="cp4-jP-LMf"/>
                             <constraint firstItem="0dF-Ol-VEP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fWa-un-UDC"/>
                             <constraint firstItem="FtV-yh-fQs" firstAttribute="top" secondItem="fCp-jO-AoP" secondAttribute="bottom" constant="20" id="sHz-5a-CwJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FtV-yh-fQs" secondAttribute="bottom" constant="50" id="ukk-Ht-s8E"/>
